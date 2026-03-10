@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container-fluid">
+
+<a class="navbar-brand" href="/">Student Portal</a>
+
+<div>
+
+<a class="btn btn-outline-light me-2" href="/login">User Login</a>
+<a class="btn btn-outline-warning me-2" href="/admin">Admin Login</a>
+
+{% if session.get('user') %}
+<a class="btn btn-outline-info me-2" href="/dashboard">Dashboard</a>
+<a class="btn btn-outline-success me-2" href="/update">Update Profile</a>
+{% endif %}
+
+{% if session.get('admin') %}
+<a class="btn btn-outline-primary me-2" href="/admin_panel">Admin Panel</a>
+{% endif %}
+
+<a class="btn btn-danger" href="/logout">Logout</a>
+
+</div>
+
+</div>
+</nav>
